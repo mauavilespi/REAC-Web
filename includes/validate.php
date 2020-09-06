@@ -17,5 +17,6 @@
         header("location:../captura.php");
     } else{
         echo "Sus datos de acceso no se encuentran en nuestra Base de Datos, inténtelo nuevamente";
+        echo '<br><a href="../admin.php">Regresar<a>';
     }
 ?>
