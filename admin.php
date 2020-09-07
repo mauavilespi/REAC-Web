@@ -2,6 +2,10 @@
 <?php include("./includes/db.php")?>
 <?php session_start();?>
 
+<?php if(isset($_SESSION['usuario'])){
+    header("location:./captura.php");
+} else{ ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,7 +17,7 @@
     <!-- Materialize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Confirm jQuery -->
-    <link rel="stylesheet" href="./plugins/confirm/css/jquery-confirm.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
     <!-- Validetta -->
     <link rel="stylesheet" href="./plugins/validetta/validetta.min.css">
     <!-- Icons Materialize -->
@@ -28,8 +32,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- FontAwesome -->
     <script src="https://use.fontawesome.com/77a5db5bb0.js"></script>
-    <!-- Confirms jQuery -->
-    <script src="./plugins/confirm/js/jquery-confirm.js"></script>
+   <!-- Confirm jQuery -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
     <!-- Validetta -->
     <script src="./plugins/validetta/validetta.min.js"></script>
     <script src="./plugins/validetta/validettaLang-es-ES.js"></script>
@@ -41,9 +45,9 @@
         <img src="./images/HeaderS.png" alt="Contacto Docente" class="responsive-img">
     </header>
 
-    <main>
+    <main class="valign-wrapper">
         <div class="container">
-                <form class="col l12" action="./includes/validate.php" method="POST">
+                <form id="form_acceso" autocomplete="off">
                 
                     <div class="row">
                         <h1 class="center-align">Administraci&oacute;n</h1>
@@ -52,7 +56,7 @@
                     <div class="row">
                         <div class="input-field col l8 offset-l2">
                             <i class="material-icons prefix">person_outline</i>
-                            <input type="text" id="username" name="username"> 
+                            <input type="text" id="username" name="username" data-validetta="required,minLength[5]"> 
                             <label for="username">Usuario</label>
                         </div>
                     </div>
@@ -60,7 +64,7 @@
                     <div class="row">
                         <div class="input-field col l8 offset-l2">
                             <i class="material-icons prefix">lock</i>
-                            <input type="password" id="pass" name="pass" >
+                            <input type="password" id="pass" name="pass" data-validetta="required,minLength[5]">
                             <label for="pass">Contrase&nacute;a</label>
                         </div>
                     </div>
@@ -79,3 +83,5 @@
 </body>
 
 </html>
+
+<?php } ?>
