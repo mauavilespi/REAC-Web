@@ -32,6 +32,7 @@
     <!-- All - In -->
     <script src="./js/function.js"></script>
     <script src="./js/captura.js"></script>
+    <script src="./js/docentes.js"></script>
     <!-- Materialize -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- FontAwesome -->
@@ -68,17 +69,25 @@
                         </select>
                         <label for="docente">Docente:</label>
                     </div>
+                    <div class="col l1">
+                            <a class="btn-floating btn-large waves-effect light-blue" id="crud_access" ><i class="material-icons">arrow_drop_down</i></a>
+                        </div>
                 </div>
 
-                <div class="row">
+                <div class="row" id="crud_docentes" style="display: none">
+                    <!--Crear Docente -->
                     <div class="col l2 offset-l3">
-                        <a class="waves-effect waves-light btn green darken-2">Crear Docente</a>
+                        <a class="waves-effect waves-light btn green darken-2 modal-trigger" href="#modal1">Agregar Docente</a>
                     </div>
+                
+                    <!-- Editar Docente -->
                     <div class="col l2">
-                        <a class="waves-effect waves-light btn amber darken-1">Editar Docente</a>
+                        <button class="waves-effect waves-light btn amber darken-1">Editar Docente</button>
                     </div>
+
+                    <!-- Eliminar Docente -->
                     <div class="col l2">
-                        <a class="waves-effect waves-light btn red lighten-1">Eliminar Docente</a>
+                        <button class="waves-effect waves-light btn red lighten-1">Eliminar Docente</button>
                     </div>
                 </div>
 
@@ -104,7 +113,7 @@
 
                 <div class="row">
                     <div class="input-field col l4 offset-l2">
-                        <input placeholder=" "  id="email" name="email" type="email" class="validate" value="">
+                        <input placeholder=" "  id="email" name="email" type="email" data-validetta="required" value="">
                         <label for="email">Correo</label>
                     </div>
 
@@ -128,6 +137,49 @@
                     </div>
                 </div>
             </form>
+
+
+
+        <!--Agregar Docente (Modal1)-->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4 class="center-align">Agregar Docente</h4>
+                <p class="center-align">Si el docente no se encuentra en la lista, por favor agr&eacute;guelo</p>
+                            
+                <div class="row">
+                                
+                    <form id="form_addDocente" autocomplete="off">
+                        <div class="input-field col l4">
+                            <input id="new_name" name="new_name" type="text" data-validetta="required">    
+                            <label class="active" for="new_name">Nombre</label>
+                        </div>
+
+                        <div class="input-field col l4">
+                            <input id="new_apepat" name="new_apepat" type="text" data-validetta="required">    
+                            <label class="active" for="new_apepat">Apellido Paterno</label>
+                        </div>
+
+                        <div class="input-field col l4">
+                            <input id="new_apemat" name="new_apemat" type="text">    
+                            <label class="active" for="new_apemat">Apellido Materno</label>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col l2 offset-l5">
+                                <button type="submit" class="btn blue darken-2 waves-effect waves-light">
+                                Guardar  <i class="fa fa-save"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Atr&aacute;s</a>
+            </div>
+        </div>
+        <!---->
 
         <div class="row">
             <a href="./includes/cerrar_sesion.php">Cerrar sesi&oacute;n</a>

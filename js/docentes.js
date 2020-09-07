@@ -1,22 +1,20 @@
 $(function () {
+    $('.modal').modal();
 
-    $("#crud_access").click(function(){
-        $("#crud_docentes").toggle("slow");
-    });
-
-    $("#form_captura").validetta({ 
+    $("#form_addDocente").validetta({
         bubblePosition: "bottom",
         bubbleGapTop: 10,
         bubbleGapLeft: -5,
-        
+    
         onValid:function(e){
             e.preventDefault();
             $.ajax({
                 method:"POST",
-                url: "./includes/save_docente.php",
-                data: $("#form_captura").serialize(),
+                url:"./includes/save_newdocente.php",
+                data:$("#form_addDocente").serialize(),
                 cache: "false",
-                success: function () {   
+                success:function(){
+                    location.reload();
                 }
             });
         }

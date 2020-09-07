@@ -2,7 +2,7 @@
 <?php include("./includes/db.php")?>
 <?php session_start();?>
 <?php
-    $query_datos = "SELECT * FROM Docentes WHERE correo IS NOT NULL OR plataforma IS NOT NULL OR descripcion IS NOT NULL";
+    $query_datos = "SELECT * FROM Docentes WHERE LENGTH(correo) > 0 ORDER BY nombre";
     $res_datos = mysqli_query($conn, $query_datos);
 ?>
 <!DOCTYPE html>
@@ -52,7 +52,7 @@
                 <?php 
                     while ($infoRow = $res_datos->fetch_assoc()){
                         echo '<div class="col l4">';
-                        echo '<div class="card blue darken-2">';
+                        echo '<div class="card medium small blue darken-2">';
                         echo '<div class="card-content white-text">';
                         echo '<span class="card-title align-center">'.$infoRow['nombre'].' '.$infoRow['apellido_pat'].' '.$infoRow['apellido_mat'].'</span>';
                         echo '<b>Correo: </b> <span>'.$infoRow['correo'].'</span>';
