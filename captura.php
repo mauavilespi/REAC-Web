@@ -5,7 +5,7 @@
     if(isset($_SESSION['usuario'])){
     
 
-    $query_docentes = "SELECT * FROM Docentes";
+    $query_docentes = "SELECT * FROM Docentes order by nombre";
     $res_docentes = mysqli_query($conn, $query_docentes);
 ?>
 
