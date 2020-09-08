@@ -34,6 +34,7 @@
     <script src="./js/captura.js"></script>
     <script src="./js/docentes.js"></script>
     <script src="./js/edit_docente.js"></script>
+    <script src="./js/delete_docente.js"></script>
     <!-- Materialize -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- FontAwesome -->
@@ -88,7 +89,7 @@
 
                     <!-- Eliminar Docente -->
                     <div class="col l2">
-                        <button class="waves-effect waves-light btn red lighten-1">Eliminar Docente</button>
+                        <button class="waves-effect waves-light btn red lighten-1" onclick="delete_docente()">Eliminar Docente</button>
                     </div>
                 </div>
 
