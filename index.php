@@ -27,7 +27,6 @@
     <script src="./plugins/jquery/jquery-3.5.1.min.js"></script>
     <!-- All - In -->
     <script src="./js/function.js"></script>
-    <script src="./js/info.js"></script>
     <!-- Materialize -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- FontAwesome -->
@@ -41,7 +40,7 @@
 
 <body>
     <header>
-        <img src="./images/HeaderS.png" alt="Contacto Docente" class="responsive-img">
+        <img src="./images/Header6.jpg" alt="Contacto Docente" class="responsive-img">
     </header>
 
     <main class="valign-wrapper">      

@@ -48,7 +48,7 @@
 
 <body>
     <header>
-        <img src="./images/HeaderS.png" alt="Contacto Docente" class="responsive-img">
+        <img src="./images/Header6.jpg" alt="Contacto Docente" class="responsive-img">
     </header>
 
     <main class="valign-wrapper">
