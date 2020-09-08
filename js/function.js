@@ -18,7 +18,7 @@ $(function () {
         cache: "false",
         success:function(respAX){
           var AX = JSON.parse(respAX);
-          var titulo = "<h1 class='center-align'>Recuperación Académica 20/2</h1>";
+          var titulo = '<h3 style="text-align:center;" class="thin">Administraci&oacute;n</h3>';
           
           if(AX.cod == 0){
             $.confirm({
