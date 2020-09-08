@@ -10,7 +10,10 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
     <title>Administraci&oacute;n</title>
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
@@ -50,11 +53,13 @@
                 <form id="form_acceso" autocomplete="off">
                 
                     <div class="row">
-                        <h1 class="center-align">Administraci&oacute;n</h1>
+                        <div class="col l12 s12 m12">
+                            <h2 class="center-align">Administraci&oacute;n Recuperaci&oacute;n Acad&eacute;mica</h2>
+                        </div>
                     </div>
 
                     <div class="row">
-                        <div class="input-field col l8 offset-l2">
+                        <div class="input-field col l8 offset-l2 s12 m12">
                             <i class="material-icons prefix">person_outline</i>
                             <input type="text" id="username" name="username" data-validetta="required,minLength[5]"> 
                             <label for="username">Usuario</label>
@@ -62,7 +67,7 @@
                     </div>
 
                     <div class="row">
-                        <div class="input-field col l8 offset-l2">
+                        <div class="input-field col l8 offset-l2 s12 m12">
                             <i class="material-icons prefix">lock</i>
                             <input type="password" id="pass" name="pass" data-validetta="required,minLength[5]">
                             <label for="pass">Contrase&nacute;a</label>
@@ -70,8 +75,8 @@
                     </div>
 
                     <div class="row">
-                        <div class="col l2 offset-l5">
-                            <button type="submit" class="btn blue darken-2 waves-effect waves-light">
+                        <div class="col l4 offset-l4 s8 offset-s2 m4 offset-m4 ">
+                            <button type="submit" class="btn blue darken-2 waves-effect waves-light" style="width:100%">
                                 <i class="material-icons right">send</i>Acceder
                             </button>
                         </div>
