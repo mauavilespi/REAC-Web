@@ -53,9 +53,7 @@
                 <form id="form_acceso" autocomplete="off">
                 
                     <div class="row">
-                        <div class="col l12 s12 m12">
-                            <h2 class="center-align">Administraci&oacute;n Recuperaci&oacute;n Acad&eacute;mica</h2>
-                        </div>
+                            <h3 class="center-align thin">Administraci&oacute;n Recuperaci&oacute;n Acad&eacute;mica</h3>
                     </div>
 
                     <div class="row">
