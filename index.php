@@ -70,6 +70,7 @@
         </div> 
     </main>
 
+    <?php include("./mod/footer.php") ?>
 </body>
 
 </html>
