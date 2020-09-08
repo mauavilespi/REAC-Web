@@ -33,6 +33,7 @@
     <script src="./js/function.js"></script>
     <script src="./js/captura.js"></script>
     <script src="./js/docentes.js"></script>
+    <script src="./js/edit_docente.js"></script>
     <!-- Materialize -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- FontAwesome -->
@@ -70,8 +71,8 @@
                         <label for="docente">Docente:</label>
                     </div>
                     <div class="col l1">
-                            <a class="btn-floating btn-large waves-effect light-blue" id="crud_access" ><i class="material-icons">arrow_drop_down</i></a>
-                        </div>
+                         <a class="btn-floating btn-large waves-effect light-blue" id="crud_access" ><i class="material-icons">arrow_drop_down</i></a>
+                    </div>
                 </div>
 
                 <div class="row" id="crud_docentes" style="display: none">
@@ -82,7 +83,7 @@
                 
                     <!-- Editar Docente -->
                     <div class="col l2">
-                        <button class="waves-effect waves-light btn amber darken-1">Editar Docente</button>
+                        <a class="waves-effect waves-light btn amber darken-1 modal-trigger" href="#modal2">Editar Docente</a>
                     </div>
 
                     <!-- Eliminar Docente -->
@@ -105,6 +106,11 @@
                                 $("#email").val(AX2.correo);
                                 $("#plattform").val(AX2.plataforma);
                                 $("#description").val(AX2.descripcion);
+                                
+                                $("#edit_name").val(AX2.nombre);
+                                $("#edit_apepat").val(AX2.apellido_pat);
+                                $("#edit_apemat").val(AX2.apellido_mat);
+                                
                             }
                         });
                     };
@@ -181,6 +187,44 @@
         </div>
         <!---->
 
+        <!-- Editar Docente -->
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <h4 class="center-align">Editar Docente</h4>
+                <p class="center-align">Seleccione al Docente antes de editarlo</p>
+            </div>
+
+            <div class="row">
+                <form id="form_editDocente" autocomplete="off">
+                    <div class="input-field col l4">
+                        <input placeholder=" " id="edit_name" name="edit_name" type="text" data-validetta="required">    
+                        <label class="active" for="edit_name">Nombre</label>
+                    </div>
+
+                    <div class="input-field col l4">
+                        <input placeholder=" " id="edit_apepat" name="edit_apepat" type="text" data-validetta="required">    
+                        <label class="active" for="edit_apepat">Apellido Paterno</label>
+                    </div>
+
+                    <div class="input-field col l4">
+                        <input placeholder=" " id="edit_apemat" name="edit_apemat" type="text" value="">    
+                        <label class="active" for="edit_apemat">Apellido Materno</label>
+                    </div>
+                                            
+                    <div class="row">
+                        <div class="col l2 offset-l5">
+                            <button type="submit" class="btn blue darken-2 waves-effect waves-light">Guardar  <i class="fa fa-save"></i></button>
+                        </div>
+                    </div>
+                </form>                    
+            </div>
+            
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Atr&aacute;s</a>
+            </div>
+        </div>
+        <!---->
+    
         <div class="row">
             <a href="./includes/cerrar_sesion.php">Cerrar sesi&oacute;n</a>
         </div>

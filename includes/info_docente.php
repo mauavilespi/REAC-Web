@@ -14,6 +14,10 @@
     $respAX['correo'] = $docInfoRow['correo'];
     $respAX['plataforma'] = $docInfoRow['plataforma'];
     $respAX['descripcion'] = $docInfoRow['descripcion'];
+    $respAX['nombre'] = $docInfoRow['nombre'];
+    $respAX['apellido_pat'] = $docInfoRow['apellido_pat'];
+    $respAX['apellido_mat'] = $docInfoRow['apellido_mat'];
+    
         
     echo json_encode($respAX);
 ?>
