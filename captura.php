@@ -13,7 +13,10 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
     <title>Captura de Datos</title>
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
@@ -53,12 +56,12 @@
 
     <main class="valign-wrapper">
         <div class="container">
-            <h1 class="center-align"> Captura de datos</h1>
+            <h3 class="center-align thin"> Captura de datos</h3>
             
             <form id="form_captura" autocomplete="off">
         
                 <div class="row">
-                    <div class="input-field col l4 offset-l4">
+                    <div class="input-field col l8 offset-l2 s9 m8 offset-m2">
                         <select id="docente" name="docente" onchange="on_change()">
                             <option value="" disabled selected>ESCOM</option>
 
@@ -71,25 +74,25 @@
                         </select>
                         <label for="docente">Docente:</label>
                     </div>
-                    <div class="col l1">
-                         <a class="btn-floating btn-large waves-effect light-blue" id="crud_access" ><i class="material-icons">arrow_drop_down</i></a>
+                    <div class="col l1 s1 m1">
+                         <a class="btn-floating btn waves-effect light-blue" id="crud_access" ><i class="material-icons">arrow_drop_down</i></a>
                     </div>
                 </div>
 
                 <div class="row" id="crud_docentes" style="display: none">
                     <!--Crear Docente -->
-                    <div class="col l2 offset-l3">
-                        <a class="waves-effect waves-light btn green darken-2 modal-trigger" href="#modal1">Agregar Docente</a>
+                    <div class="col l2 offset-l3 s6 offset-s3 m6 offset-m3" style="padding-bottom: 0.5em;">
+                        <a class="waves-effect waves-light btn green darken-2 modal-trigger" style="width:100%;padding-bottom: 0.5em;" href="#modal1">Agregar Docente</a>
                     </div>
                 
                     <!-- Editar Docente -->
-                    <div class="col l2">
-                        <a class="waves-effect waves-light btn amber darken-1 modal-trigger" href="#modal2">Editar Docente</a>
+                    <div class="col l2 s6 offset-s3 m6 offset-m3" style="padding-bottom: 0.5em;">
+                        <a class="waves-effect waves-light btn amber darken-1 modal-trigger" style="width:100%;padding-bottom: 0.5em;" href="#modal2">Editar Docente</a>
                     </div>
 
                     <!-- Eliminar Docente -->
-                    <div class="col l2">
-                        <button class="waves-effect waves-light btn red lighten-1" onclick="delete_docente()">Eliminar Docente</button>
+                    <div class="col l2 s6 offset-s3 m6 offset-m3" style="padding-bottom: 0.5em;">
+                        <button class="waves-effect waves-light btn red lighten-1" style="width:100%;" onclick="delete_docente()">Eliminar Docente</button>
                     </div>
                 </div>
 
@@ -119,17 +122,17 @@
                 <!-- -->
 
                 <div class="row">
-                    <div class="input-field col l4 offset-l2">
+                    <div class="input-field col l4 offset-l2 s12">
                         <input placeholder=" "  id="email" name="email" type="email" data-validetta="required" value="">
                         <label for="email">Correo</label>
                     </div>
 
-                    <div class="input-field col l4">
+                    <div class="input-field col l4 s12">
                         <input placeholder=" " id="plattform" name="plattform" type="text" value="">
                         <label class="active" for="plattform">Plataforma / Tecnolog&iacute;a a utilizar</label>
                     </div>
 
-                    <div class="input-field col l4 offset-l4">
+                    <div class="input-field col l4 offset-l4 s12">
                         <textarea placeholder=" " id="description" name="description" class="materialize-textarea"></textarea>
                         <label class="active" for="description">Descripci&oacute;n u Observaciones</label>
                     </div>
@@ -137,8 +140,8 @@
                 </div>
 
                 <div class="row">
-                    <div class="col l2 offset-l5">
-                        <button type="submit" class="btn blue darken-2 waves-effect waves-light">
+                    <div class="col l4 offset-l4 m6 offset-m3 s8 offset-s2">
+                        <button type="submit" class="btn blue darken-2 waves-effect waves-light" style="width:100%;">
                             Guardar  <i class="fa fa-save"></i>
                         </button>
                     </div>
@@ -156,24 +159,24 @@
                 <div class="row">
                                 
                     <form id="form_addDocente" autocomplete="off">
-                        <div class="input-field col l4">
+                        <div class="input-field col l4 s12 m12">
                             <input id="new_name" name="new_name" type="text" data-validetta="required">    
                             <label class="active" for="new_name">Nombre</label>
                         </div>
 
-                        <div class="input-field col l4">
+                        <div class="input-field col l4 s12 m12">
                             <input id="new_apepat" name="new_apepat" type="text" data-validetta="required">    
                             <label class="active" for="new_apepat">Apellido Paterno</label>
                         </div>
 
-                        <div class="input-field col l4">
+                        <div class="input-field col l4 s12 m12">
                             <input id="new_apemat" name="new_apemat" type="text">    
                             <label class="active" for="new_apemat">Apellido Materno</label>
                         </div>
                         
                         <div class="row">
-                            <div class="col l2 offset-l5">
-                                <button type="submit" class="btn blue darken-2 waves-effect waves-light">
+                            <div class="col l4 offset-l4 s8 offset-s2 m6 offset-m3">
+                                <button type="submit" class="btn blue darken-2 waves-effect waves-light" style="width:100%;">
                                 Guardar  <i class="fa fa-save"></i>
                                 </button>
                             </div>
@@ -197,24 +200,24 @@
 
             <div class="row">
                 <form id="form_editDocente" autocomplete="off">
-                    <div class="input-field col l4">
+                    <div class="input-field col l4 s12 m12">
                         <input placeholder=" " id="edit_name" name="edit_name" type="text" data-validetta="required">    
                         <label class="active" for="edit_name">Nombre</label>
                     </div>
 
-                    <div class="input-field col l4">
+                    <div class="input-field col l4 s12 m12">
                         <input placeholder=" " id="edit_apepat" name="edit_apepat" type="text" data-validetta="required">    
                         <label class="active" for="edit_apepat">Apellido Paterno</label>
                     </div>
 
-                    <div class="input-field col l4">
+                    <div class="input-field col l4 s12 m12">
                         <input placeholder=" " id="edit_apemat" name="edit_apemat" type="text" value="">    
                         <label class="active" for="edit_apemat">Apellido Materno</label>
                     </div>
                                             
                     <div class="row">
-                        <div class="col l2 offset-l5">
-                            <button type="submit" class="btn blue darken-2 waves-effect waves-light">Guardar  <i class="fa fa-save"></i></button>
+                        <div class="col l4 offset-l4 s8 offset-s2 m6 offset-m3">
+                            <button type="submit" class="btn blue darken-2 waves-effect waves-light" style="width:100%;">Guardar  <i class="fa fa-save"></i></button>
                         </div>
                     </div>
                 </form>                    
