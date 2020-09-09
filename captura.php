@@ -229,8 +229,8 @@
         </div>
         <!---->
     
-        <div class="row">
-            <a href="./includes/cerrar_sesion.php">Cerrar sesi&oacute;n</a>
+        <div class="row right" style="padding-top:2em;">
+            <a href="./includes/cerrar_sesion.php">Cerrar sesi&oacute;n <i class="fa fa-sign-out" aria-hidden="true"></i></a>
         </div>
         
   </main>
