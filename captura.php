@@ -87,7 +87,7 @@
                 
                     <!-- Editar Docente -->
                     <div class="col l2 s6 offset-s3 m6 offset-m3" style="padding-bottom: 0.5em;">
-                        <a class="waves-effect waves-light btn amber darken-1 modal-trigger disabled" id="edit_docente" style="width:100%;padding-bottom: 0.5em;" href="#modal2">Editar Docente</a>
+                        <a class="waves-effect waves-light btn amber darken-1 modal-trigger disabled" id="edit_doc" style="width:100%;padding-bottom: 0.5em;" href="#modal2">Editar Docente</a>
                     </div>
 
                     <!-- Eliminar Docente -->
@@ -111,7 +111,7 @@
                                 $("#plattform").val(AX2.plataforma);
                                 $("#description").val(AX2.descripcion);
                                 
-                                $("#edit_docente").removeClass("disabled");
+                                $("#edit_doc").removeClass("disabled");
                                 $("#delete_doc").removeClass("disabled");
                                 $("#guardar_info").removeClass("disabled");
 
