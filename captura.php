@@ -92,7 +92,7 @@
 
                     <!-- Eliminar Docente -->
                     <div class="col l2 s6 offset-s3 m6 offset-m3" style="padding-bottom: 0.5em;">
-                        <button class="waves-effect waves-light btn red lighten-1 disabled" id="delete_docente" style="width:100%;" onclick="delete_docente()">Eliminar Docente</button>
+                        <button class="waves-effect waves-light btn red lighten-1 disabled" id="delete_doc" style="width:100%;" onclick="delete_docente()">Eliminar Docente</button>
                     </div>
                 </div>
 
@@ -112,7 +112,8 @@
                                 $("#description").val(AX2.descripcion);
                                 
                                 $("#edit_docente").removeClass("disabled");
-                                $("#delete_docente").removeClass("disabled");
+                                $("#delete_doc").removeClass("disabled");
+                                $("#guardar_info").removeClass("disabled");
 
                                 $("#edit_name").val(AX2.nombre);
                                 $("#edit_apepat").val(AX2.apellido_pat);
@@ -144,7 +145,7 @@
 
                 <div class="row">
                     <div class="col l4 offset-l4 m6 offset-m3 s8 offset-s2">
-                        <button type="submit" class="btn blue darken-2 waves-effect waves-light" style="width:100%;">
+                        <button type="submit" class="btn blue darken-2 waves-effect waves-light disabled" style="width:100%;" id="guardar_info">
                             Guardar  <i class="fa fa-save"></i>
                         </button>
                     </div>
@@ -163,17 +164,17 @@
                                 
                     <form id="form_addDocente" autocomplete="off">
                         <div class="input-field col l4 s12 m12">
-                            <input id="new_name" name="new_name" type="text" data-validetta="required">    
+                            <input id="new_name" name="new_name" type="text" data-validetta="required,regExp[letters]">    
                             <label class="active" for="new_name">Nombre</label>
                         </div>
 
                         <div class="input-field col l4 s12 m12">
-                            <input id="new_apepat" name="new_apepat" type="text" data-validetta="required">    
+                            <input id="new_apepat" name="new_apepat" type="text" data-validetta="required,regExp[letters]">    
                             <label class="active" for="new_apepat">Apellido Paterno</label>
                         </div>
 
                         <div class="input-field col l4 s12 m12">
-                            <input id="new_apemat" name="new_apemat" type="text">    
+                            <input id="new_apemat" name="new_apemat" type="text" data-validetta="regExp[letters]">    
                             <label class="active" for="new_apemat">Apellido Materno</label>
                         </div>
                         
@@ -204,17 +205,17 @@
             <div class="row">
                 <form id="form_editDocente" autocomplete="off">
                     <div class="input-field col l4 s12 m12">
-                        <input placeholder=" " id="edit_name" name="edit_name" type="text" data-validetta="required">    
+                        <input placeholder=" " id="edit_name" name="edit_name" type="text" data-validetta="required,regExp[letters]">    
                         <label class="active" for="edit_name">Nombre</label>
                     </div>
 
                     <div class="input-field col l4 s12 m12">
-                        <input placeholder=" " id="edit_apepat" name="edit_apepat" type="text" data-validetta="required">    
+                        <input placeholder=" " id="edit_apepat" name="edit_apepat" type="text" data-validetta="required,regExp[letters]">    
                         <label class="active" for="edit_apepat">Apellido Paterno</label>
                     </div>
 
                     <div class="input-field col l4 s12 m12">
-                        <input placeholder=" " id="edit_apemat" name="edit_apemat" type="text" value="">    
+                        <input placeholder=" " id="edit_apemat" name="edit_apemat" type="text" value="" data-validetta="regExp[letters]">    
                         <label class="active" for="edit_apemat">Apellido Materno</label>
                     </div>
                                             

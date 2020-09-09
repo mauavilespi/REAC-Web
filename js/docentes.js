@@ -5,7 +5,14 @@ $(function () {
         bubblePosition: "bottom",
         bubbleGapTop: 10,
         bubbleGapLeft: -5,
-    
+        validators: {
+            regExp: {
+                letters : {
+                    pattern : /^[a-zA-ZÀ-ÿ\u00f1\u00d1]*$/i, 
+                    errorMessage : 'No se aceptan números'
+                }
+            }
+        },  
         onValid:function(e){
             e.preventDefault();
             $.ajax({
