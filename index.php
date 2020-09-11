@@ -45,7 +45,10 @@
 
     <main class="valign-wrapper">      
         <div class="container">
-            <h1 class="center-align">Contactos de los docentes para los cursos de Recuperaci&oacute;n Acad&eacute;mica</h1>
+            <div class="row">
+                <h2 class="center-align thin">Contactos de los docentes para los cursos de Recuperaci&oacute;n Acad&eacute;mica</h2>
+            </div>
+            
     
             <div class="row">
                 <?php 
