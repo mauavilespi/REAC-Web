@@ -13,15 +13,32 @@ $(function () {
         },  
         onValid:function(e){
             e.preventDefault();
-            $.ajax({
-                method:"POST",
-                url:"./includes/edit_docente.php",
-                data:$("#form_editDocente").serialize(),
-                cache: "false",
-                success:function(){
-                    location.reload();
+            $.confirm({
+                title: '<h3 style="text-align:center;" class="thin">Administraci&oacute;n</h3>',
+                type:'orange',
+                content: "<p class='center-align' style='font-size:1.7em'>¿Está seguro de editar al contacto?</p>",
+                typeAnimated: true,
+                buttons: {
+                   tryAgain: {
+                    text: 'Confirmar',
+                    btnClass: 'btn-orange',
+                    action: function(){
+                        $.ajax({
+                            method:"POST",
+                            url:"./includes/edit_docente.php",
+                            data:$("#form_editDocente").serialize(),
+                            cache: "false",
+                            success:function(){
+                                location.reload();
+                            }
+                        });
+                      },
+                    },
+                    No: function(){
+                    }
                 }
             });
-        }
+        },
     });
 });
+                
