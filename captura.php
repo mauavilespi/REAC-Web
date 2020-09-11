@@ -17,6 +17,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <meta name="description" content="">
     <meta name="keywords" content="">
+    <link rel="icon" href="./images/LogoESCOM.png" type="image">
     <title>Captura de Datos</title>
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
