@@ -62,6 +62,7 @@
         
                 <div class="row">
                     <div class="input-field col l8 offset-l2 s9 m8 offset-m2">
+                        <i class="material-icons prefix">assignment_ind</i>
                         <select id="docente" name="docente" onchange="on_change()">
                             <option value="" disabled selected>ESCOM</option>
 
@@ -127,16 +128,19 @@
 
                 <div class="row">
                     <div class="input-field col l4 offset-l2 s12">
+                        <i class="material-icons prefix">email</i>
                         <input placeholder=" "  id="email" name="email" type="text" data-validetta="required,email" value="">
                         <label for="email">Correo</label>
                     </div>
 
                     <div class="input-field col l4 s12">
+                        <i class="material-icons prefix">devices</i>
                         <input placeholder=" " id="plattform" name="plattform" type="text" value="">
                         <label class="active" for="plattform">Plataforma / Tecnolog&iacute;a a utilizar</label>
                     </div>
 
                     <div class="input-field col l4 offset-l4 s12">
+                        <i class="material-icons prefix">insert_comment</i>
                         <textarea placeholder=" " id="description" name="description" class="materialize-textarea"></textarea>
                         <label class="active" for="description">Descripci&oacute;n u Observaciones</label>
                     </div>
@@ -164,6 +168,7 @@
                                 
                     <form id="form_addDocente" autocomplete="off">
                         <div class="input-field col l4 s12 m12">
+                            <i class="material-icons prefix">perm_identity</i>
                             <input id="new_name" name="new_name" type="text" data-validetta="required,regExp[letters]">    
                             <label class="active" for="new_name">Nombre</label>
                         </div>
@@ -205,6 +210,7 @@
             <div class="row">
                 <form id="form_editDocente" autocomplete="off">
                     <div class="input-field col l4 s12 m12">
+                        <i class="material-icons prefix">perm_identity</i>
                         <input placeholder=" " id="edit_name" name="edit_name" type="text" data-validetta="required,regExp[letters]">    
                         <label class="active" for="edit_name">Nombre</label>
                     </div>
