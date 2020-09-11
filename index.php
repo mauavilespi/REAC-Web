@@ -5,37 +5,30 @@
     $query_datos = "SELECT * FROM Docentes WHERE LENGTH(correo) > 0 ORDER BY nombre";
     $res_datos = mysqli_query($conn, $query_datos);
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
     <title>Contactos Docentes REAC </title>
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- Materialize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Confirm jQuery -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
-    <!-- Validetta -->
-    <link rel="stylesheet" href="./plugins/validetta/validetta.min.css">
     <!-- Icons Materialize -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- JS -->
     <!-- jQuery -->
     <script src="./plugins/jquery/jquery-3.5.1.min.js"></script>
-    <!-- All - In -->
-    <script src="./js/function.js"></script>
     <!-- Materialize -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- FontAwesome -->
     <script src="https://use.fontawesome.com/77a5db5bb0.js"></script>
-   <!-- Confirm jQuery -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
-    <!-- Validetta -->
-    <script src="./plugins/validetta/validetta.min.js"></script>
-    <script src="./plugins/validetta/validettaLang-es-ES.js"></script>
 </head>
 
 <body>
@@ -45,11 +38,11 @@
 
     <main class="valign-wrapper">      
         <div class="container">
+
             <div class="row">
                 <h2 class="center-align thin">Contactos de los docentes para los cursos de Recuperaci&oacute;n Acad&eacute;mica</h2>
             </div>
             
-    
             <div class="row">
                 <?php 
                     while ($infoRow = $res_datos->fetch_assoc()){
