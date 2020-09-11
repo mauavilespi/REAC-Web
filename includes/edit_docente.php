@@ -1,7 +1,7 @@
 <?php
     include("db.php");
     session_start();
-    if(isset($_SESSION['usuario'])){
+    if((isset($_SESSION['usuario'])) && (isset($_POST['edit_name']))){
 
     $id_edit = $_SESSION['id'];
     $newName_edit= $_POST['edit_name'];

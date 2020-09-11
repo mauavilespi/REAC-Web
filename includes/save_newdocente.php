@@ -1,7 +1,7 @@
 <?php
     include("db.php");
     session_start();
-    if((isset($_SESSION['usuario'])) && isset($_POST['new_name'])){
+    if((isset($_SESSION['usuario'])) && (isset($_POST['new_name']))){
     
     $newName= $_POST['new_name'];
     $newApePat = $_POST['new_apepat'];
