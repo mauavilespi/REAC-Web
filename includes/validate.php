@@ -22,7 +22,7 @@
     if($row > 0){
         $_SESSION['usuario'] = $usuario;
         $respAX['cod'] = 1;
-        $respAX['msg'] = "<p class='center-align' style='font-size:2em'>Bienvenido <span style='color:green'>$usuario</span></p>";
+        $respAX['msg'] = "<p class='center-align' style='font-size:2em'>Bienvenido <span style='color:green'>$usuario</span>, ojal&aacute; est&eacute; pasando un buen d&iacute;a</p>";
         //header("location:../captura.php");
     } else{
         $respAX['cod'] = 0;
