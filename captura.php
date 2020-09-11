@@ -92,7 +92,7 @@
 
                     <!-- Eliminar Docente -->
                     <div class="col l2 s6 offset-s3 m6 offset-m3" style="padding-bottom: 0.5em;">
-                        <button class="waves-effect waves-light btn red lighten-1 disabled" id="delete_doc" style="width:100%;" onclick="delete_docente()">Eliminar Docente</button>
+                        <a class="waves-effect waves-light btn red lighten-1 disabled" id="delete_doc" style="width:100%;">Eliminar Docente</a>
                     </div>
                 </div>
 
