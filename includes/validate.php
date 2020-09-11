@@ -3,9 +3,13 @@
     
     session_start();
     
+    //Seguridad
+    if(isset($_POST['username'])){
+        
     $usuario = $_POST['username'];
     $password = $_POST['pass'];
     $password = md5($password);
+
 
     //Arreglo Asociativo
     $respAX = [];
@@ -28,4 +32,7 @@
 
     echo json_encode($respAX);
     
+    }else{
+        header("location:../index.php");
+    }
 ?>
