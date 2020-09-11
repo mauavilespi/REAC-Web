@@ -21,7 +21,18 @@ $(function () {
                 data:$("#form_addDocente").serialize(),
                 cache: "false",
                 success:function(){
-                    location.reload();
+                    $.confirm({
+                        columnClass: 'small',
+                        title: '<h3 style="text-align:center;" class="thin">Administraci&oacute;n</h3>',
+                        icon: 'fa fa-check-circle fa-lg',
+                        type: 'green',
+                        content: "<p class='center-align' style='font-size:1.7em'>El docente se ha agregado con &eacute;xito</p>",
+                        buttons: {
+                            ok:function(){
+                                location.reload();
+                            }
+                        }
+                    });
                 }
             });
         }
