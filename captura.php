@@ -127,7 +127,7 @@
 
                 <div class="row">
                     <div class="input-field col l4 offset-l2 s12">
-                        <input placeholder=" "  id="email" name="email" type="email" data-validetta="required" value="">
+                        <input placeholder=" "  id="email" name="email" type="text" data-validetta="required,email" value="">
                         <label for="email">Correo</label>
                     </div>
 
