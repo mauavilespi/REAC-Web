@@ -1,11 +1,10 @@
 <?php
     session_start();
 
-    if($_SESSION['usuario'] == null || $_SESSION['usuario'] == ''){
-        echo 'No tiene los permisos para acceder aquí';
-        die();
+    if(isset($_SESSION['usuario'])){
+        session_destroy();
+        header("location:../admin.php");
+    } else{
+        header("location:../index.php");
     }
-    
-    session_destroy();
-    header("location:../admin.php");
 ?>
