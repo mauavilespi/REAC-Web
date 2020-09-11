@@ -1,6 +1,7 @@
 <?php
     include("db.php");
     session_start();
+    if(isset($_SESSION['usuario'])){
 
     $id_doc = $_POST['id_doc'];    
     $_SESSION['id'] = $id_doc;
@@ -20,4 +21,8 @@
     
         
     echo json_encode($respAX);
+    
+    } else{
+    header("location:../index.php");
+}
 ?>
