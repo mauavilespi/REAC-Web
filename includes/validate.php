@@ -22,11 +22,11 @@
     if($row > 0){
         $_SESSION['usuario'] = $usuario;
         $respAX['cod'] = 1;
-        $respAX['msg'] = "<p class='center-align' style='font-size:2em'>Bienvenido <span style='color:green'>$usuario</span>, ojal&aacute; est&eacute; pasando un buen d&iacute;a</p>";
+        $respAX['msg'] = "<p class='center-align' style='font-size:2em'>Bienvenido <span style='color:green'>$usuario</span>, ojal&aacute; est&eacute; pasando un buen d&iacute;a.</p>";
         //header("location:../captura.php");
     } else{
         $respAX['cod'] = 0;
-        $respAX['msg'] = "<p class='center-align' style='font-size:2em'>El usuario <span style='color:red'>$usuario</span> no se encuentran en nuestra base de datos, inténtelo nuevamente</p>";
+        $respAX['msg'] = "<p class='center-align' style='font-size:2em'>El usuario <span style='color:red'>$usuario</span> no se encuentran en nuestra base de datos, inténtelo nuevamente.</p>";
         //echo '<br><a href="../admin.php">Regresar<a>';
     }
 

@@ -16,7 +16,7 @@ $(function () {
             $.confirm({
                 title: '<h3 style="text-align:center;" class="thin">Administraci&oacute;n</h3>',
                 type:'orange',
-                content: "<p class='center-align' style='font-size:1.7em'>¿Está seguro de editar al contacto?</p>",
+                content: "<p class='center-align' style='font-size:1.7em'>¿Está seguro de editar al docente?</p>",
                 typeAnimated: true,
                 buttons: {
                    tryAgain: {
